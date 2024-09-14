@@ -1,5 +1,5 @@
 .App {
-  background-color: #000000;
+  background-image: linear-gradient(to right, #808080, #000000);
   min-height: 100vh;
   text-align: center;
   padding-bottom: 100px;
@@ -45,7 +45,7 @@ img.brandLogo {
 }
 
 .navbar {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Playfair Display", serif;
   color: white;
   font-weight: 500;
   font-size: 20px;
@@ -95,5 +95,7 @@ footer .inner{
 .footer:hover .inner {
   border-radius: 0%
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 

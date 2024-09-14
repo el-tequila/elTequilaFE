@@ -1,0 +1,30 @@
+img.tequilaMaking {
+    width: 400px; /* Change the image width */
+    height: auto; /* Maintain the image aspect ratio */
+    margin-right: 20px; 
+    margin-top: 45px;
+    float: left; 
+  }
+.mainLogo {
+    height: 400px; 
+    width: auto; 
+}
+  
+  .Home {
+    width: 80%; 
+    margin: 40px auto; 
+  }
+
+  .image-container {
+    width: 80%;
+    margin: 40px auto; 
+    overflow: auto;
+  }
+
+  .home-text {
+    text-align: justify;
+    font-size: 25px;
+    color: #FFFFFF;
+    font-family: "Playfair Display", serif;
+  }
+  

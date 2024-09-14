@@ -1,0 +1,28 @@
+.Navbar {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+    background-image: linear-gradient(to right, #808080, #000000);
+}
+.brandLogo {
+    opacity: 0.8;
+    height: 100px; 
+}
+
+.navbar-text {
+    transition: 0.3s; /* add a smooth transition effect */
+    color: #fff;
+  }
+
+.navbar .nav-link {
+    transition: font-size 0.3s, text-decoration 0.3s; 
+}
+
+.navbar .nav-link.home:hover {
+    font-size: 14px; 
+    text-decoration: underline;
+    color: #fff;
+    text-decoration-color: #fff; /* white underline */
+    text-decoration-thickness: 2px;
+}
