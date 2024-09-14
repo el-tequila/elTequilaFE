@@ -1,9 +1,9 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
-import About from './components/About';
-import AppNavbar from './components/Navbar';
-import Home from './components/Home';
-import Footer from './components/Footer';
+import About from './components/about';
+import AppNavbar from './components/navbar';
+import Home from './components/home';
+import Footer from './components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 

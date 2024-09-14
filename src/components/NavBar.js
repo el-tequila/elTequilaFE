@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/container';  
 import Nav from 'react-bootstrap/Nav';
-import './Navbar-style.css';
+import './navbar-style.css';
 import Navbar from 'react-bootstrap/Navbar';
 
 
