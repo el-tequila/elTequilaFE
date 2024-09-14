@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container'; 
-import "./About.css";
+import "./About-style.css";
 
 const About = () => {
     return(

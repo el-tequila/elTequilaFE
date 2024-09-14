@@ -1,4 +1,4 @@
-import "./Home.css";
+import "./Home-style.css";
 import Container from 'react-bootstrap/Container'; 
 const Home = () => {
     return (
