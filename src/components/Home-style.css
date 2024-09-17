@@ -1,31 +1,34 @@
-img.tequilaMaking {
-    width: 400px; /* Change the image width */
-    height: auto; /* Maintain the image aspect ratio */
-    margin-right: 20px; 
-    margin-top: 45px;
-    float: left; 
-  }
-.mainLogo {
-    height: 400px; 
-    width: auto; 
-    
-}
   
   .Home {
+    padding-top: 80px;
     width: 80%; 
     margin: 40px auto; 
   }
 
   .image-container {
-    width: 80%;
-    margin: 40px auto; 
-    overflow: auto;
+    border-width: 2px;
+    border-style: solid; 
+    border-image: linear-gradient(to right, #E5AC5B, #8E5F33) 1;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 700px; 
+    margin: 40px auto;
   }
 
   .home-text {
     text-align: justify;
-    font-size: 25px;
+    font-size: 23px;
     color: #FFFFFF;
-    font-family: "Playfair Display", serif;
+    font-family: "Libre Baskerville", serif;
+  }
+
+  .signature {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400; 
+    font-style: normal;
+    font-size: 70px;
+    color: #FFFFFF;
+    text-align: right;
   }
   

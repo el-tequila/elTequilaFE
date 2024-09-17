@@ -9,9 +9,9 @@ const AppNavbar = () => {
     return(
         <div> 
             <Navbar variant="dark" expand="lg" sticky="top">
-                <Container className="container-fluid"> 
-                    <Navbar.Brand className="brand" href="/" >
-                        <img src="/images/tmpLogo.png" alt="brand logo" className="brandLogo"/> 
+                <Container fluid className="container-fluid"> 
+                    <Navbar.Brand className="brand">
+                        <img src="/images/tequila_logo.png" alt="brand logo" className="brandLogo"/> 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" >

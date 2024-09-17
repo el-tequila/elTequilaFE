@@ -1,5 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
+import { Routes, Route } from "react-router-dom";
 import About from './components/about';
 import AppNavbar from './components/navbar';
 import Home from './components/home';
