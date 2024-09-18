@@ -1,8 +1,10 @@
   
   .Home {
-    padding-top: 80px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
     width: 80%; 
-    margin: 40px auto;
+    padding: 0 20px;
   }
 
   .image-container {
@@ -32,11 +34,8 @@
     text-align: right;
   }
   .brandLogoMain {
-    position: sticky;
-    top: 30%;
-    transform: translateY(-50%);
-    margin: 0 auto;
-    display: block;
     height: 300px;
     width: auto;
+    margin-bottom: 30px;
+    padding-top: 20px; 
   }

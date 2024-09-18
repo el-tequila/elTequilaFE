@@ -7,12 +7,11 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
-      <div className="footer">
-        <footer>
-          <Container className='inner'>
-            <h1 className="text-left" >
+        <footer className="footer">
+          <div className='inner'>
+            <p className="text-left" >
             © El Tequila All rights reserved. 2024
-              </h1>
+              </p>
               <div className='social-media-icons'>
                 <a href="https://facebook.com">
                   <FontAwesomeIcon icon={faFacebook} />
@@ -24,9 +23,8 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
               </div>
-          </Container>
+          </div>
         </footer>
-      </div>
     );
   };
   
