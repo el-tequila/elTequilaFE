@@ -10,10 +10,9 @@ const Footer = () => {
       <div className="footer">
         <footer>
           <Container className='inner'>
-            <h1 className="text-center" >
-            Contact Us!
+            <h1 className="text-left" >
+            © El Tequila All rights reserved. 2024
               </h1>
-              <br></br>
               <div className='social-media-icons'>
                 <a href="https://facebook.com">
                   <FontAwesomeIcon icon={faFacebook} />

@@ -2,7 +2,7 @@
   .Home {
     padding-top: 80px;
     width: 80%; 
-    margin: 40px auto; 
+    margin: 40px auto;
   }
 
   .image-container {
@@ -31,4 +31,12 @@
     color: #FFFFFF;
     text-align: right;
   }
-  
+  .brandLogoMain {
+    position: sticky;
+    top: 30%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    display: block;
+    height: 300px;
+    width: auto;
+  }
