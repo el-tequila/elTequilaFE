@@ -1,0 +1,49 @@
+.container-fluid {
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+    padding-left: 0 !important; 
+    padding-right: 0 !important;
+    margin: 0; 
+    justify-content: space-between;
+    background: #fff;
+}
+.brandLogo {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    height: 120px;
+    width: auto;
+    padding-top: 40px; /* add padding */
+}
+
+.custom-nav {
+    transition: 0.3s; /* add a smooth transition effect */
+    color: #fff;
+    font-size: 20px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.navbar .nav-link {
+    transition: font-size 0.3s, text-decoration 0.3s; 
+    background: linear-gradient(to right, #E5AC5B, #8E5F33);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+    font-weight: 900;
+}
+
+.navbar .nav-link:hover {
+    font-size: 25px; 
+    text-decoration: underline;
+    color: #fff;
+    text-decoration-color: #fff; /* white underline */
+}
