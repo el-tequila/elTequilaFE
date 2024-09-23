@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/container';
 import Nav from 'react-bootstrap/Nav';
 import './navbar-style.css';
 import Navbar from 'react-bootstrap/Navbar';
+import logo from '../assets/formula1_logo.svg';
 
 
 const AppNavbar = () => {
@@ -11,7 +12,7 @@ const AppNavbar = () => {
             <Navbar variant="dark" expand="lg" sticky="top">
                 <Container fluid className="container-fluid"> 
                     <Navbar.Brand className="brand">
-                        <img src="/images/tequila_logo.png" alt="brand logo" className="brandLogo"/> 
+                        <img src={logo} alt="brand logo" className="brandLogo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" >
