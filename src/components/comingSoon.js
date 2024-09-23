@@ -1,5 +1,5 @@
 import "./cs-style.css";
-import Container from 'react-bootstrap/Container'; 
+import Container from 'react-bootstrap/Container';
 import logo from '../assets/formula1_logo.svg';
 
 const ComingSoon = () => {
