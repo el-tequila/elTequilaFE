@@ -22,31 +22,36 @@ body {
     border-width: 3px;
     border-style: solid; 
     border-image: linear-gradient(to right, #E5AC5B, #8E5F33) 1;
-    padding: 30px;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.4);
-    max-width: 700px; 
+    max-width: 850px; 
     margin-bottom: 10%;
   }
   
   .main-text {
     text-align: justify;
-    font-size: 18px;
+    font-size: 20px;
     color: #FFFFFF;
     font-family: "Libre Baskerville", serif;
+    margin-bottom: 10px; 
+    line-height: 1.5;
+    padding-bottom: 5px;
   }
 
   .signature {
     font-family: "Lavishly Yours", cursive;
     font-weight: 400; 
     font-style: normal;
-    font-size: 70px;
+    font-size: 50px;
     color: #FFFFFF;
     text-align: right;
+    line-height: 1.5;
+    margin-top: -10px;
   }
   .brandLogoMain {
-    height: 300px;
+    height: 160px;
     width: auto;
-    margin-bottom: 30px;
+    padding-bottom: 15px;
     padding-top: 20px; 
   }
   /* Media query for mobile devices */
