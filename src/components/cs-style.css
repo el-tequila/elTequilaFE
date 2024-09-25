@@ -1,6 +1,6 @@
 body {
   margin: 0; /* Remove default body margin */
-  background-image: url('../../public/images/homebg.png');
+  background-image: url('../../public/images/homebg.svg');
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -30,7 +30,7 @@ body {
   
   .main-text {
     text-align: justify;
-    font-size: 23px;
+    font-size: 18px;
     color: #FFFFFF;
     font-family: "Libre Baskerville", serif;
   }
