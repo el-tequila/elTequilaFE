@@ -40,5 +40,20 @@ footer {
     margin: 0; 
   }
 
+  @media only screen and (max-width: 768px) {
+    footer {
+      position: relative; /* Change to relative */
+      height: auto; /* Adjust height */
+    }
+    footer .inner {
+      flex-direction: column; /* Stack elements vertically */
+      padding-left: 15px; /* Adjust padding */
+      padding-right: 15px; /* Adjust padding */
+    }
+    .social-media-icons {
+      margin-left: 0; /* Reset margin */
+      padding-bottom: 20px; /* Add padding */
+    }
+  }
   
   
