@@ -1,6 +1,6 @@
 .top-margin {
     margin: 0; /* Remove default body margin */
-    background-image: url('/Users/marcelavijil/Documents/el_Tequila/front-end/public/images/blueagave.png');
+    background-image: url('../../public/images/blueagave.png');
     width: 100%;
     margin: 0;
     display: flex; 
