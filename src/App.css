@@ -1,4 +1,4 @@
-.App {
+/* .App {
   background-image: url('/Users/marcelavijil/Documents/el_Tequila/front-end/public/images/homebg.png');
   width: 100%;
   min-height: 100vh;
@@ -8,8 +8,7 @@
   background-position: center center; 
   display: flex; 
   flex-direction: column;
-  /* padding-bottom: 20%; */
-}
+} */
 
 .text-to-right {
   direction: rtl;

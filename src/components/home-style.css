@@ -1,0 +1,23 @@
+.top-margin {
+    margin: 0; /* Remove default body margin */
+    background-image: url('/Users/marcelavijil/Documents/el_Tequila/front-end/public/images/blueagave.png');
+    width: 100%;
+    margin: 0;
+    display: flex; 
+    flex-direction: column;
+  }
+
+.margin-text {
+    text-align: justify;
+    font-size: 23px;
+    color: #FFFFFF;
+    font-family: "Libre Baskerville", serif;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.underline {
+    text-decoration: underline;
+}

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Container from 'react-bootstrap/container';  
+import Container from 'react-bootstrap/Container'; 
 import Nav from 'react-bootstrap/Nav';
 import './navbar-style.css';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,10 +18,13 @@ const AppNavbar = () => {
                     <Navbar.Collapse id="responsive-navbar-nav" >
                         <Nav className="custom-nav">
                             <Nav.Link className="home" as={Link} to={"/home"}>
-                                HOME
+                                Home
                             </Nav.Link>
-                            <Nav.Link as={Link} to={"/about"}>
-                                ABOUT
+                            <Nav.Link as={Link} to={"/gallery"}>
+                                Gallery
+                            </Nav.Link>
+                            <Nav.Link as={Link} to={"/contact"}>
+                                Contact
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
