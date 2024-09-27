@@ -2,7 +2,7 @@ import "./footer-style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
@@ -19,7 +19,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a href="https://x.com/_eltequila_">
-                  <FontAwesomeIcon icon={faTwitter} />
+                  <FontAwesomeIcon icon={faXTwitter} />
                 </a>
               </div>
           </div>
