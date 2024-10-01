@@ -8,9 +8,11 @@ const Footer = () => {
     return (
         <footer className="footer">
           <div className='inner'>
-            <p className="text-left" >
-            © Los Alumbrados. All rights reserved. 2024
+            <div className="footer-content">
+              <p className="text-left" >
+                © Los Alumbrados. All rights reserved. 2024
               </p>
+              <a href="mailto:info@eltequila.com?subject=Tequila%20Inquiry" className="contact-us">Contact Us</a>
               <div className='social-media-icons'>
                 <a href="https://www.facebook.com/profile.php?id=61565716603349">
                   <FontAwesomeIcon icon={faFacebook} />
@@ -22,6 +24,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faXTwitter} />
                 </a>
               </div>
+            </div>
           </div>
         </footer>
     );
