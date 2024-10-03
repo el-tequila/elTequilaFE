@@ -1,17 +1,28 @@
-.top-margin {
+body {
+    margin: 0; 
+  }
+.home-container {
     margin: 0; /* Remove default body margin */
     background-image: url('../../public/images/blueagave.png');
-    width: 100%;
-    margin: 0;
+    width: 100vw;
+    height: 80vh; 
+    background-size: cover; 
+    background-position: center; 
     display: flex; 
     flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start;
+    padding: 0 !important;
   }
 
-.margin-text {
-    text-align: justify;
-    font-size: 23px;
+.text-container {
+    text-align: left;
+    font-size: 40px;
     color: #FFFFFF;
     font-family: "Libre Baskerville", serif;
+    line-height: .7;  
+    padding-left: 80px; 
+    padding-bottom: 100px;  
 }
 
 .bold {
@@ -20,4 +31,18 @@
 
 .underline {
     text-decoration: underline;
+    font-weight: bolder;
+    line-height: 1px;
 }
+
+.bottom-text {
+    color: #264D4C; 
+    font-family: "Libre Baskerville", serif; 
+    margin-bottom: 30px; /* Adjust spacing as needed */
+    padding-left: 80px; /* Align with top text */
+  }
+  
+  .bottom-text p {
+    font-size: 17px; /* Adjust font size as needed */
+    line-height: 1.6;  /* Adjust line height as needed */
+  }

@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container'; 
-import "./about-style.css";
+import "./contact-style.css";
 
-const About = () => {
+const Contact = () => {
     return(
         <Container className="About">
             <div className="image-container">
@@ -13,4 +13,4 @@ After cooking, the piñas are crushed and mixed with water to create a sweet, fe
         </Container>
     )
 }
-export default About; 
+export default Contact; 
