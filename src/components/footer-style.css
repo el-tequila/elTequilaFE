@@ -1,11 +1,10 @@
 
 footer {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: auto; 
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     display: flex;
     justify-content: center;
   }
@@ -22,39 +21,46 @@ footer {
   }
 
   .footer-content {
-    display: flex; 
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-start;
     width: 100%;
-    align-items: center;
-    align-items: baseline;
+    border-top: 1px solid #ccc;
+    padding: 10px 20px;
   }
 
   .social-media-icons {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
   }
   
   .social-media-icons a {
-    margin-left: 10px;
+    margin-left: 0px;
+    margin-bottom: 5px;
     font-size: 20px;
     color: #fff;
+    margin-right: 15px;
+  }
+
+  .social-media-icons a:last-child { 
+    margin-right: 0; /* Remove margin from the last icon */
   }
   .contact-us {
-    margin-left: 20px; 
     color: #fff; 
     font-family: "Libre Baskerville", serif;
-    font-size: 13px;
-    text-decoration: underline;
+    font-size: 18px;
     font-weight: bold;
-    text-decoration-color: #fff;
+    margin-bottom: 0px;
   }
   
-  .text-left {
+  .text-right {
     color: #fff;
     font-family: "Libre Baskerville", serif;
     font-size: 12px; 
-    margin-right: 20px;
-    padding-top: 5px;
-    line-height: 1.5;
+    line-height: 1;
+    text-align: right;
+    padding-top: 30px;
   }
 
   @media only screen and (max-width: 768px) {
