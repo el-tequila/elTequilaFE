@@ -46,3 +46,27 @@ body {
     font-size: 17px; /* Adjust font size as needed */
     line-height: 1.6;  /* Adjust line height as needed */
   }
+
+  @media only screen and (max-width: 768px) {
+    .home-container {
+      height: 100vh; /* adjust height for mobile */
+      justify-content: center; /* center content vertically */
+    }
+  
+    .text-container {
+      font-size: 24px; /* reduce font size for mobile */
+      padding-left: 20px; /* reduce padding for mobile */
+      padding-bottom: 50px; /* reduce padding for mobile */
+    }
+  
+    .bottom-text {
+      margin-bottom: 20px; /* reduce margin for mobile */
+      padding-left: 20px; /* reduce padding for mobile */
+    }
+  
+    .bottom-text p {
+      font-size: 14px; /* reduce font size for mobile */
+      line-height: 1.4; /* adjust line height for mobile */
+    }
+  }
+  
