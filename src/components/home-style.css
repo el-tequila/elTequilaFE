@@ -30,9 +30,13 @@ body {
 }
 
 .underline {
-    text-decoration: underline;
-    font-weight: bolder;
-    line-height: 1px;
+    border-bottom: 3px solid #fff; /* adjust border as needed */
+    padding-bottom: 3px;
+}
+.custom-color {
+    color: #AF6900; /* replace with your desired color */
+    text-align: left;
+    font-size: 12px;
 }
 
 .bottom-text {
@@ -43,8 +47,31 @@ body {
   }
   
   .bottom-text p {
-    font-size: 17px; /* Adjust font size as needed */
+    font-size: 12px; /* Adjust font size as needed */
     line-height: 1.6;  /* Adjust line height as needed */
+  }
+
+  .underline-color {
+    font-size: 50px; 
+    font-weight: bolder;
+    border-bottom: 3px solid #AF6900; /* adjust border as needed */
+    padding-bottom: 3px;
+  }
+  .we-are {
+    font-size: 35px !important;
+    line-height: 0 !important; 
+    padding-top: 40px; 
+  }
+
+  .alumbrados {
+    font-size: 48px; /* match font size with Los */
+    font-weight: bolder; /* make Alumbrados bold */
+    line-height: .5 !important;
+  }
+
+  .custom-text {
+    font-size: 12px; /* adjust to match "We love our craft" size */
+    line-height: 1.6;
   }
 
   @media only screen and (max-width: 768px) {
