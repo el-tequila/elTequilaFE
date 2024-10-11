@@ -24,7 +24,6 @@
 
 .custom-nav {
     transition: 0.3s; /* add a smooth transition effect */
-    color: #fff;
     font-size: 12px;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -33,15 +32,37 @@
     margin-right: 5%;
   }
 
+  .custom-nav .nav-link {
+    color: #264D4C !important;
+  }
+
 .navbar .nav-link {
+    position: relative; 
     color: #264D4C;
     display: inline-block;
     font-weight: 900;
+    transition: .3s; 
 }
 
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #264D4C;
+    transition: 0.3s;
+  }
+  
+.navbar .nav-link:hover::before {
+    width: calc(100% - 10px);
+    left: 6px;
+  }
+
 .navbar .nav-link:hover {
-    font-size: 25px; 
-    text-decoration: underline;
+    font-size: 12px; 
     color: #264D4C;
     text-decoration-color: #264D4C; /* white underline */
 }
+
