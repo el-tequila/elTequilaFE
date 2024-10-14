@@ -20,6 +20,9 @@ const AppNavbar = () => {
                             <Nav.Link className="home" as={Link} to={"/home"}>
                                 Home
                             </Nav.Link>
+                            {/* <Nav.Link as={Link} to={"/gallery"}>
+                                Gallery
+                            </Nav.Link> */}
                             <Nav.Link as={Link} to={"/gallery"}>
                                 Gallery
                             </Nav.Link>
