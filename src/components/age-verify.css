@@ -1,0 +1,94 @@
+.age-verify-container {
+    margin: 0; 
+    background-image: url('../../public/images/homebg.svg');
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: 10% 30%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .age-verify {
+    width: 90%;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 20px; 
+  }
+
+  .age-text {
+    text-align: center;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 10px; 
+    line-height: 1.5;
+    padding-bottom: 5px;
+  }
+
+  .age-btn {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+
+  .age-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .image-container {
+    border-width: 3px;
+    border-style: solid; 
+    border-image: linear-gradient(to right, #E5AC5B, #8E5F33) 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    max-width: 60%; 
+    margin: 0 auto; 
+    margin-top: 15vh; 
+  }
+  
+  .brand-age {
+    height: 30vh;
+    width: auto;
+    padding-bottom: 15px;
+    padding-top: 20px; 
+    margin: 0 auto; /* Added */
+    display: block; /* Added */
+    margin-bottom: 10vh; 
+  }
+
+  /* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  .age-verify {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .age-text {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .age-btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+  .image-container {
+    max-width: 90%;
+    margin-top: 10vh;
+    padding: 15px;
+  }
+  .brand-age {
+    height: 20vh;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    margin-bottom: 5vh;
+  }
+}

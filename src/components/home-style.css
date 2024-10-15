@@ -261,33 +261,33 @@ body {
     }
   
     .text-container {
-      font-size: 24px; /* reduce font size for mobile */
-      padding-left: 20px; /* reduce padding for mobile */
-      padding-bottom: 50px; /* reduce padding for mobile */
+      font-size: 18px; /* reduce font size for mobile */
+      padding-left: 10px; /* reduce padding for mobile */
+      padding-bottom: 30px; /* reduce padding for mobile */
     }
   
     .bottom-text {
-      margin-bottom: 20px; /* reduce margin for mobile */
-      padding-left: 20px; /* reduce padding for mobile */
+      margin-bottom: 15px; /* reduce margin for mobile */
+      padding-left: 10px; /* reduce padding for mobile */
     }
   
     .bottom-text p {
-      font-size: 14px; /* reduce font size for mobile */
-      line-height: 1.4; /* adjust line height for mobile */
+      font-size: 12px; /* reduce font size for mobile */
+      line-height: 1.2; /* adjust line height for mobile */
     }
     .vision-text {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     
       .connect {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     
       .connect-button {
-        padding: 10px;
-        font-size: 18px;
+        padding: 8px;
+        font-size: 16px;
       }
     
       .invitation {
@@ -295,20 +295,35 @@ body {
       }
     
       .custom-color {
-        font-size: 10px;
+        font-size: 9px;
       }
     
       .underline-color {
-        font-size: 30px;
+        font-size: 24px;
       }
     
       .alumbrados {
-        font-size: 30px;
+        font-size: 24px;
       }
     
       .we-are {
-        font-size: 25px;
-        padding-top: 20px;
+        font-size: 20px;
+        padding-top: 15px;
+      }
+      .carousel-nav-container {
+        padding-right: 10vw;
+      }
+    
+      .carousel-text-wrapper {
+        margin-left: 10vw;
+      }
+    
+      .mission-container {
+        grid-template-columns: 1fr;
+      }
+    
+      .our-mission {
+        padding-left: 10vw;
       }
   }
   

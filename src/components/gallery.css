@@ -1,0 +1,31 @@
+.coming-soon-container {
+    height: 84vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .coming-soon-title {
+    color: #264D4C; 
+    font-family: "Libre Baskerville", serif;
+    font-size: 40px;
+    text-align: left;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .coming-text {
+    padding-bottom: 3px; 
+    border-bottom: 4px solid #AF6900;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .coming-soon-container {
+      height: 95vh; /* Increased height for smaller mobile screens */
+    }
+  
+    .coming-soon-title {
+      font-size: 24px; /* Further reduced font size for smaller mobile screens */
+    }
+  }
