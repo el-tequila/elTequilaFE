@@ -2,7 +2,7 @@ body {
     margin: 0; 
   }
 .home-container {
-    background-image: url('../../public/images/blueagave.png');
+    background-image: url('../../public/images/bludeagave.jpg');
     width: 100vw;
     height: 60vh; 
     background-size: cover; 
@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     justify-content: flex-end; 
     align-items: flex-start;
-    padding: 0 !important;
+    padding-left: 10vw; 
   }
 
 .text-container {
@@ -21,9 +21,10 @@ body {
     color: #FFFFFF;
     font-family: "Libre Baskerville", serif;
     line-height: .7;  
-    padding-left: 18vw; 
+    padding-left: 10vw; 
     padding-bottom: 100px;  
 }
+
 
 .bold {
     font-weight: bolder;
@@ -44,7 +45,7 @@ body {
     color: #264D4C; 
     font-family: "Libre Baskerville", serif; 
     margin-bottom: 30px; /* Adjust spacing as needed */
-    padding-left: 80px; /* Align with top text */
+    padding-left: 6vw; 
   }
   
   .bottom-text p {
@@ -53,11 +54,13 @@ body {
   }
 
   .underline-color {
-    font-size: 50px; 
+    font-size: 48px; 
     font-weight: 500;
     border-bottom: 4px solid #AF6900; /* adjust border as needed */
     padding-bottom: 3px;
+    box-sizing: border-box;
   }
+
   .we-are {
     font-size: 35px !important;
     line-height: 0 !important; 
@@ -68,6 +71,7 @@ body {
     font-size: 48px; /* match font size with Los */
     font-weight: 500; /* make Alumbrados bold */
     line-height: .5 !important;
+    white-space: nowrap;
   }
 
   .custom-text {
@@ -113,8 +117,9 @@ body {
     display: grid;
     flex-direction: column;
     align-items: center;
-    grid-template-columns: 1fr 3fr; /* adjust column ratios */
+    grid-template-columns: 2fr 5fr; 
     align-items: center;
+    gap: 0; 
   }
 
   .our-mission {
@@ -122,20 +127,17 @@ body {
     white-space: nowrap;
     color: #264D4C; 
     font-family: "Libre Baskerville", serif;
-    font-size: 40px;
+    font-size: 48px;
     text-align: left;
-    padding-left: 18vw;
+    padding-left: 19vw;
     font-weight: 500;
-    margin-bottom: 20px; 
   }
 
   .carousel-nav-container {
     grid-column: 2;
     display: flex;
     justify-content: center;
-    width: 90%;
-    margin: 0 auto; 
-    padding-right: 30vw;
+    width: 100%;
     position: relative; 
   }
 
@@ -143,16 +145,17 @@ body {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    margin-right: 15vw; 
     width: 70%;
     height: 0.3px; /* Thin base line */
     background-color: rgba(51, 51, 51, 0.3);
   }
   
   .carousel-nav {
+    margin-left: 30px; 
     top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     padding: 10px;
     background-color: transparent;
@@ -164,7 +167,7 @@ body {
     font-size: 15px;
     color: #1A1A1A;
     opacity: 0.6;
-    margin: 0 40px;
+    margin: 0 30px;
     cursor: pointer;
     font-weight: 100;
     position: relative; 
@@ -203,7 +206,7 @@ body {
   .carousel-text-wrapper {
     padding-left: 20px;
     padding-right: 12vw;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-size: 22px;
     font-weight: 500;
     color: #264D4C; 
@@ -316,6 +319,7 @@ body {
     
       .carousel-text-wrapper {
         margin-left: 10vw;
+        font-size: 15px;
       }
     
       .mission-container {

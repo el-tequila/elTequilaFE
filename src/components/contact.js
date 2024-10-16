@@ -1,16 +1,167 @@
 import Container from 'react-bootstrap/Container'; 
 import "./contact-style.css";
+import { useState } from 'react';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      countryCode: '',
+      dob: '',
+      countryOfResidence: '',
+      zipCode: '',
+      inquiry: '',
+      isLegalDrinkingAge: false,
+      receiveMarketing: false,
+    });
+  
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+  
+    const handleCheckboxChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.checked });
+    };
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      const { firstName, lastName, email, phone, countryCode, dob, countryOfResidence, zipCode, inquiry, isLegalDrinkingAge, receiveMarketing } = formData;
+    }; 
+
     return(
-        <Container className="About">
-            <div className="image-container">
-            <img src="images/agave.jpeg" className="agave"/>
-                <h1 className="heading"> About Us</h1>
-                <p className="paragraph1">Tequila, the spirit of Mexico, is a timeless and iconic liquor made from the blue agave plant, primarily grown in the Jalisco region. The production of tequila is a labor-intensive process that begins with the harvesting of mature agave plants, which are carefully selected and cut by skilled jimadores. The agave hearts, or piñas, are then cooked in autoclaves or traditional ovens to convert the starches into fermentable sugars.
-After cooking, the piñas are crushed and mixed with water to create a sweet, fermented liquid called mosto. This mixture is then distilled twice in copper or stainless steel stills to produce a clear, strong spirit. The tequila is then aged in oak barrels, which impart a rich, complex flavor and character. Finally, the tequila is bottled and labeled, ready to be enjoyed around the world. With its rich history, cultural significance, and smooth, crisp taste, tequila remains a beloved and authentic symbol of Mexican tradition and hospitality.</p>
+        <Container className="contact">
+            <div className='contact-inquiry'>
+            <p><span className="underline-contact">Co</span><span className="text-start">ntact Us</span></p>
             </div>
+            <form onSubmit={handleSubmit}>
+                <div className="form-row">
+                    <div className="form-group">
+                    <label>First Name</label>
+                    <input
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        required
+                    />
+                    </div>
+                    <div className="form-group">
+                    <label>Last Name</label>
+                    <input
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        required
+                    />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-group">
+                        <label>Email Address</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                </div>
+                <div className="form-group">
+                    <label>Phone</label>
+                    <div className="phone-group">
+                    <select name="countryCode" value={formData.countryCode} onChange={handleChange}>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+52">+52 (Mexico)</option>
+                        {/* Add more country codes as needed */}
+                    </select>
+                    <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        className="phone-input"
+                    />
+                        </div>
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-group">
+                    <label>Date of Birth</label>
+                    <input
+                        type="date"
+                        name="dob"
+                        value={formData.dob}
+                        onChange={handleChange}
+                        required
+                    />
+                    </div>
+                    <div className="form-group">
+                    <label>Country of Residence</label>
+                    <input
+                        type="text"
+                        name="countryOfResidence"
+                        value={formData.countryOfResidence}
+                        onChange={handleChange}
+                        required
+                    />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-group">
+                    <label>Zip Code</label>
+                    <input
+                        type="text"
+                        name="zipCode"
+                        value={formData.zipCode}
+                        onChange={handleChange}
+                        required
+                    />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-group">
+                    <label>Inquiry</label>
+                    <textarea
+                        name="inquiry"
+                        value={formData.inquiry}
+                        onChange={handleChange}
+                        required
+                    />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-group">
+                    <input
+                        type="checkbox"
+                        name="isLegalDrinkingAge"
+                        checked={formData.isLegalDrinkingAge}
+                        onChange={handleCheckboxChange}
+                        required
+                    />
+                    <label>I am of Legal Drinking Age</label>
+                    </div>
+                <div className="form-group">
+                    <input
+                    type="checkbox"
+                    name="receiveMarketing"
+                    checked={formData.receiveMarketing}
+                    onChange={handleCheckboxChange}
+                    />
+                    <label>
+                    I would like to receive marketing communications, additional benefits, 
+                    invitations to private events and the latest news about El Tequila products. 
+                    By subscribing you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
+                    </label>
+                </div>
+                </div>
+
+            <button type="submit" className="submit-btn">Submit</button>
+            </form>
         </Container>
-    )
-}
-export default Contact; 
+        )
+    }
+export default Contact;

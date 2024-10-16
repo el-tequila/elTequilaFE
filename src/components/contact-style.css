@@ -1,14 +1,129 @@
-.heading {
-    font-weight: bolder;
-    color: #FFFFFF
+.contact-inquiry {
+    color: #264D4C; 
+    font-family: "Libre Baskerville", serif; 
+    margin-bottom: 30px; /* Adjust spacing as needed */
+    padding-left: 80px; /* Align with top text */
+    padding-top: 20vh; 
 }
 
-.paragraph1 {
-    font-size: 12px;
-    color: #FFFFFF
+.text-start{
+    color: #264D4C; 
+    font-family: "Libre Baskerville", serif; 
+    font-size: 48px; 
+    font-weight: 500;
 }
 
-.agave {
-    height: 700px;
-    width: auto;
+.underline-contact {
+    color: #264D4C; 
+    font-family: "Libre Baskerville", serif; 
+    margin-bottom: 30px; /* Adjust spacing as needed */
+    font-size: 40px; 
+    font-weight: 500;
+    border-bottom: 4px solid #AF6900; /* adjust border as needed */
+    padding-bottom: 3px;
+  }
+
+  .form-row {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 5vw;
+  }
+  
+  .form-group {
+    flex-basis: 48%; /* Adjust width */
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+  }
+
+  .form-group label {
+    font-family: "Libre Baskerville", serif; /* Font family */
+    font-size: 18px; /* Font size */
+    font-weight: 500; /* Font weight */
+    color: #264D4C; /* Text color */
+    margin-bottom: 5px; /* Spacing between label and input */
+    margin-right: 10px; 
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+  }
+
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group input[type="tel"], 
+.form-group input[type="date"] {
+  padding: 10px;
+  border: none; 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  outline: none; 
+  width: 70%;
 }
+
+.form-group select {
+    border: none; 
+    padding: 10px; 
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+
+.form-group.phone-group select {
+    padding: 10px;
+    width: 30%; /* adjust width as needed */
+}
+  
+.form-group.phone-group input[type="tel"] {
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+    width: 70%; /* adjust width as needed */
+}
+  
+.form-group.phone-group input[type="tel"] {
+    border: none; 
+    box-shadow: none;
+    max-width: 60%
+}
+
+.phone-input {
+    width: 70%;
+  }
+
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 30vh; /* Set minimum height */
+  }
+  
+  .form-group input[type="checkbox"] {
+    margin-right: 10px; /* Add space between checkbox and label */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group label {
+    font-weight: normal; /* Remove bold font weight */
+  }
+
+  .submit-btn {
+    font-family: "Libre Baskerville", serif; 
+    font-size: 18px; 
+    background-color: #264D4C; /* Green */
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 50px; /* Adjust spacing as needed */
+    margin-left: 10vw;
+  }
+
+  .submit-btn:hover {
+    border: 2px solid #fff; /* White border on hover */
+    box-shadow: 0 0 0 2px #264D4C, 0 0 0 4px #fff; /* Optional box-shadow */
+    transition: 0.35s ease-out;
+  }
