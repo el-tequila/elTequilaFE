@@ -46,7 +46,7 @@ const Home = () => {
                                 We love our craft! For generations, this tradition has been at the heart of our family, and now, with open arms, we invite the world to join us and become a part of our family.
                             </span>
                         </Col>
-                        <Col md={6} style={{ paddingLeft: '50px', paddingTop: '60px', paddingRight: '60px' }}>
+                        <Col className="col-two" md={6} style={{ paddingLeft: '50px', paddingTop: '60px', paddingRight: '60px' }}>
                             <p className="custom-text">For over two centuries, the heart of Jalisco has pulsed with the rhythm of agave harvests, carrying the timeless echoes of tradition. A family’s legacy, rooted in passion and dedication, has been passed down through generations, creating a tequila that embodies the spirit of the land and the warmth of their heritage. Today, with pride in their hearts, they invite the world to share in their treasured creation.</p>
                             <p className="custom-text">This is more than just tequila; it’s an invitation to celebrate life itself. It’s the sound of laughter around the table, a toast to the bonds of family and community, and a reminder of the moments that matter most. Each sip is a journey—an expression of authenticity and sustainability, a promise born from the agave fields. A legacy of love flows through every bottle, sparking joy and forging connections wherever it is shared.</p>
                         </Col>

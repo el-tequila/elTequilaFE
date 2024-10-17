@@ -264,19 +264,23 @@ body {
     }
   
     .text-container {
-      font-size: 18px; /* reduce font size for mobile */
-      padding-left: 10px; /* reduce padding for mobile */
-      padding-bottom: 30px; /* reduce padding for mobile */
+      font-size: 25px; /* reduce font size for mobile */
+      padding-left: 5px; /* reduce padding for mobile */
+      padding-bottom: 10px; /* reduce padding for mobile */
     }
   
     .bottom-text {
-      margin-bottom: 15px; /* reduce margin for mobile */
-      padding-left: 10px; /* reduce padding for mobile */
+        margin-bottom: 10px; /* reduce margin for mobile */
+        padding-left: 10px; /* reduce padding for mobile */
     }
   
     .bottom-text p {
       font-size: 12px; /* reduce font size for mobile */
       line-height: 1.2; /* adjust line height for mobile */
+    }
+
+    .col-two{
+        padding-top: 20px !important; 
     }
     .vision-text {
         padding-left: 10px;
@@ -300,23 +304,44 @@ body {
       }
     
       .custom-color {
-        font-size: 9px;
+        font-size: 12px;
       }
     
       .underline-color {
-        font-size: 24px;
+        font-size: 35px;
       }
     
       .alumbrados {
-        font-size: 24px;
+        font-size: 35px;
       }
     
       .we-are {
-        font-size: 20px;
-        padding-top: 20px;
+        font-size: 25px !important; 
+        padding-top: 30px;
       }
       .carousel-nav-container {
         padding-right: 10vw;
+        max-width: 75vw;
+      }
+
+      .carousel-nav-item {
+        display: none; 
+        font-size: 10px; 
+      }
+      .carousel-nav-item.active {
+        display: block; /* show only active nav item */
+      }
+
+      .carousel-nav-item.active::after {
+        bottom: -11px; 
+      }
+
+      .carousel-nav-container::before {
+        position: absolute;
+        bottom: 0;
+        width: 35%;
+        height: 0.3px; /* Thin base line */
+        background-color: rgba(51, 51, 51, 0.3);
       }
     
       .carousel-text-wrapper {

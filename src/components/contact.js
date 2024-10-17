@@ -39,11 +39,8 @@ const Contact = () => {
       }
       TequilaDataService.addContact(data)
         .then (response => {
-            if (response.data.status=="OK"){
-                console.log("setting response");
-                setResponseData(response.data.status);                
-            }
-          navigate("/contact")
+            const content = e.target.value;
+          navigate("/home")
         })
         .catch(e => {
           console.log(e);
@@ -144,11 +141,8 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="form-row">
-                    <div className="form-group">
-                        <div>
-                            <label>Inquiry</label>
-                        </div>
-                        <div>
+                    <div className="form-group inquiry-group">
+                        <label>Inquiry</label>
                         <textarea
                             name="inquiry"
                             value={formData.inquiry}
@@ -157,7 +151,6 @@ const Contact = () => {
                         />
                         </div>
                     </div>
-                </div>
                 <div className="form-row">
                     <div className="form-group">
                     <input
@@ -187,11 +180,6 @@ const Contact = () => {
                 </div>
             <button type="submit" className="submit-btn" onClick={ handleSubmit }>Submit</button>
             </form>
-            {responseData && (
-            <div>
-\            <p>Thank you for your inquiry, we will get back to you shortly</p>
-            </div>
-      )}
         </Container>
         )
     }

@@ -88,35 +88,32 @@
     }
     
     .custom-nav ul {
-      display: flex;
-      flex-direction: column; /* Stack nav links vertically */
-      align-items: center;
+        display: none; 
+        flex-direction: column; 
+        align-items: center;
+        position: absolute;
+        top: 75px; /* Adjusted for the logo height */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
     }
     
+    .custom-nav ul.show {
+        display: flex;
+      }
+
     .custom-nav li {
       margin-bottom: 10px;
     }
     
     .custom-nav a {
-      font-size: 16px;
+        font-size: 18px; 
+        padding: 10px 0; 
     }
     
     /* Hamburger menu icon */
     .menu-icon {
       display: block;
-      cursor: pointer;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    
-    .menu-icon span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background-color: #264D4C;
-      margin: 5px auto;
-      transition: 0.3s;
     }
   }
 
