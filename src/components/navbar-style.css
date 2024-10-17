@@ -119,27 +119,4 @@
       transition: 0.3s;
     }
   }
-  
-  /* Toggle navbar menu on hamburger menu icon click */
-  @media only screen and (max-width: 768px) {
-    .custom-nav ul {
-      display: none; /* Hide navbar menu by default */
-    }
-    
-    .menu-icon.open span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .menu-icon.open span:nth-child(2) {
-      opacity: 0;
-    }
-    
-    .menu-icon.open span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-    
-    .custom-nav ul.open {
-      display: flex;
-    }
-  }
 
