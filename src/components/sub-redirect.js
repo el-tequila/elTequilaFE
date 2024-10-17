@@ -21,8 +21,6 @@ const Contact = () => {
       receiveMarketing: false,
     });
   
-    const [responseData, setResponseData] = useState(null);
-
     const handleChange = (e) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -39,11 +37,8 @@ const Contact = () => {
       }
       TequilaDataService.addContact(data)
         .then (response => {
-            if (response.data.status=="OK"){
-                console.log("setting response");
-                setResponseData(response.data.status);                
-            }
-          navigate("/contact")
+            const content = e.target.value;
+          navigate("/home")
         })
         .catch(e => {
           console.log(e);
@@ -54,6 +49,9 @@ const Contact = () => {
         <Container className="contact">
             <div className='contact-inquiry'>
             <p><span className="underline-contact">Co</span><span className="text-start">ntact Us</span></p>
+            </div>
+            <div>
+                <p>Thank you for your inquiry! A representative will reach out to you shortly!</p>
             </div>
             <form onSubmit={handleSubmit}>
                 <div className="form-row">
@@ -187,11 +185,6 @@ const Contact = () => {
                 </div>
             <button type="submit" className="submit-btn" onClick={ handleSubmit }>Submit</button>
             </form>
-            {responseData && (
-            <div>
-\            <p>Thank you for your inquiry, we will get back to you shortly</p>
-            </div>
-      )}
         </Container>
         )
     }

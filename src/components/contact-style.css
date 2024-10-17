@@ -111,8 +111,8 @@
 
   .form-group.checkbox-group {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align items to left */
+    flex-direction: row; /* Stack elements vertically */
+    align-items: center; /* Align items to left */
   }
 
   .submit-btn {
