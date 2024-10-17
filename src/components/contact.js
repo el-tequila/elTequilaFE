@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import TequilaDataService from '../services/tequila';
 
 const Contact = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
       firstName: '',
@@ -37,7 +37,8 @@ const Contact = () => {
       }
       TequilaDataService.addContact(data)
         .then (response => {
-          navigate("/contacts")
+            const content = e.target.value;
+          navigate("/home")
         })
         .catch(e => {
           console.log(e);
