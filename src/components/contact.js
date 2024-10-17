@@ -1,8 +1,12 @@
 import Container from 'react-bootstrap/Container'; 
 import "./contact-style.css";
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import TequilaDataService from '../services/tequila';
 
 const Contact = () => {
+    const navigate = useNavigate()
+
     const [formData, setFormData] = useState({
       firstName: '',
       lastName: '',
@@ -28,7 +32,17 @@ const Contact = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       const { firstName, lastName, email, phone, countryCode, dob, countryOfResidence, zipCode, inquiry, isLegalDrinkingAge, receiveMarketing } = formData;
-    }; 
+      let data = {
+        name: firstName
+      }
+      TequilaDataService.addContact(data)
+        .then (response => {
+          navigate("/contacts")
+        })
+        .catch(e => {
+          console.log(e);
+        });
+      }; 
 
     return(
         <Container className="contact">
@@ -163,7 +177,7 @@ const Contact = () => {
                     </label>
                 </div>
                 </div>
-            <button type="submit" className="submit-btn">Submit</button>
+            <button type="submit" className="submit-btn" onClick={ handleSubmit }>Submit</button>
             </form>
         </Container>
         )
