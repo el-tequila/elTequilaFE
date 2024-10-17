@@ -75,6 +75,9 @@ const Contact = () => {
                     <select name="countryCode" value={formData.countryCode} onChange={handleChange}>
                         <option value="+1">+1 (USA)</option>
                         <option value="+52">+52 (Mexico)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+44">+44 (United Kingdom)</option>
                         {/* Add more country codes as needed */}
                     </select>
                     <input
@@ -144,7 +147,9 @@ const Contact = () => {
                     />
                     <label>I am of Legal Drinking Age</label>
                     </div>
-                <div className="form-group">
+                    </div>
+                <div className="form-row">
+                <div className="form-group checkbox-group">
                     <input
                     type="checkbox"
                     name="receiveMarketing"
@@ -158,7 +163,6 @@ const Contact = () => {
                     </label>
                 </div>
                 </div>
-
             <button type="submit" className="submit-btn">Submit</button>
             </form>
         </Container>

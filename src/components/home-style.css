@@ -286,6 +286,8 @@ body {
       .connect {
         padding-left: 10px;
         padding-right: 10px;
+        padding-top: 10px;
+        font-size: 15px;
       }
     
       .connect-button {
@@ -311,7 +313,7 @@ body {
     
       .we-are {
         font-size: 20px;
-        padding-top: 15px;
+        padding-top: 20px;
       }
       .carousel-nav-container {
         padding-right: 10vw;
