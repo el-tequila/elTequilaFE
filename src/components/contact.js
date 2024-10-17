@@ -86,7 +86,6 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                     <label>Phone</label>
-                    <div className="phone-group">
                     <select name="countryCode" value={formData.countryCode} onChange={handleChange}>
                         <option value="+1">+1 (USA)</option>
                         <option value="+52">+52 (Mexico)</option>
@@ -105,7 +104,6 @@ const Contact = () => {
                     />
                         </div>
                     </div>
-                </div>
                 <div className="form-row">
                     <div className="form-group">
                     <label>Date of Birth</label>
@@ -142,13 +140,17 @@ const Contact = () => {
                 </div>
                 <div className="form-row">
                     <div className="form-group">
-                    <label>Inquiry</label>
-                    <textarea
-                        name="inquiry"
-                        value={formData.inquiry}
-                        onChange={handleChange}
-                        required
-                    />
+                        <div>
+                            <label>Inquiry</label>
+                        </div>
+                        <div>
+                        <textarea
+                            name="inquiry"
+                            value={formData.inquiry}
+                            onChange={handleChange}
+                            required
+                        />
+                        </div>
                     </div>
                 </div>
                 <div className="form-row">

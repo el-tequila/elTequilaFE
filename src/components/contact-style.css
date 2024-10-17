@@ -2,7 +2,7 @@
     color: #264D4C; 
     font-family: "Libre Baskerville", serif; 
     margin-bottom: 30px; /* Adjust spacing as needed */
-    padding-left: 80px; /* Align with top text */
+    padding-left: 10vw; /* Align with top text */
     padding-top: 20vh; 
 }
 
@@ -26,59 +26,52 @@
   .form-row {
     display: flex; 
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 20px; 
     flex-wrap: nowrap;
-    padding-left: 5vw;
+    padding-left: 10vw;
+    width: 80%; 
+    gap: 80px;
+  }
+
+  .form-row .form-group {
+    flex-basis: 48%;
   }
   
   .form-group {
-    flex-basis: 48%; /* Adjust width */
-    margin-bottom: 10px;  
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    margin-bottom: 20px; 
   }
 
   .form-group label {
+    flex-basis: 40%;
     font-family: "Libre Baskerville", serif; /* Font family */
     font-size: 18px; /* Font size */
     font-weight: 500; /* Font weight */
     color: #264D4C; /* Text color */
-    margin-bottom: 0px; /* Spacing between label and input */
-    margin-right: 10px; 
-    padding: 5px; 
+    margin-right: 5px; 
+    margin-bottom: 10px; 
   }
 
 .form-group input[type="text"], 
 .form-group input[type="email"], 
 .form-group input[type="tel"], 
 .form-group input[type="date"] {
-  padding: 10px;
-  border: none; 
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  box-shadow: none;
-  outline: none; 
-  width: 70%;
-  padding-top: 25px; 
-  padding-bottom: 15px;
-  font-family: "Libre Baskerville", serif;
+    flex-grow: 1;
+    border: none; 
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    outline: none; 
+    font-family: "Libre Baskerville", serif;
 }
 
 .form-group select {
     border: none; 
-    padding: 10px; 
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
     font-family: "Libre Baskerville", serif;
-}
-
-.form-group.phone-group select {
-    padding: 10px;
-    width: 30%; /* adjust width as needed */
-}
-  
-.form-group.phone-group input[type="tel"] {
-    padding: 10px;
-    border: none;
-    box-shadow: none;
-    width: 70%; /* adjust width as needed */
 }
 
 .phone-input {
@@ -105,6 +98,15 @@
   .form-group label {
     font-weight: normal; /* Remove bold font weight */
     display: inline-block; 
+  }
+  
+  .form-group select[name="countryCode"] {
+    width: 100px; /* Adjust select width */
+    margin-right: 10px;
+  }
+  
+  .form-group input[type="tel"][name="phone"] {
+    flex-grow: 1; /* Take remaining space */
   }
 
   .form-group.checkbox-group {
