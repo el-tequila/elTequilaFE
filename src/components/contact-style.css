@@ -86,6 +86,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 30vh; /* Set minimum height */
     min-width: 55vw;
+    resize: none;
   }
   
   .form-group input[type="checkbox"] {
@@ -272,4 +273,19 @@
     background-color: #e9ecef;
   }
   
+  @media (max-width: 768px) {
+    .text-start, .underline-contact {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .form-group label {
+        flex-basis: 100%; /* Labels take full width */
+        margin-bottom: 5px; /* Adjust spacing */
+    }
+
+    .form-group {
+        flex-direction: column; /* Stack checkbox and label vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+}
 

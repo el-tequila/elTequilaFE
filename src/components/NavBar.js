@@ -15,6 +15,11 @@ const AppNavbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const handleLinkClick = () => {
+        setIsMenuOpen(false);
+    };
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -45,13 +50,13 @@ const AppNavbar = () => {
                     {/* <Navbar.Collapse id="responsive-navbar-nav" > */}
                     <Nav className="custom-nav" ref={ menuRef }>
                         <ul className={isMenuOpen ? 'show' : ''}> 
-                        <Nav.Link className="home" as={Link} to={"/home"}>
+                        <Nav.Link className="home" as={Link} to={"/home"} onClick={handleLinkClick}>
                             Home
                         </Nav.Link>
-                        <Nav.Link as={Link} to={"/gallery"}>
+                        <Nav.Link as={Link} to={"/gallery"} onClick={handleLinkClick}>
                             Gallery
                         </Nav.Link>
-                        <Nav.Link as={Link} to={"/contact"}>
+                        <Nav.Link as={Link} to={"/contact"} onClick={handleLinkClick}>
                             Contact
                         </Nav.Link>
                     </ul>

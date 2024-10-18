@@ -171,7 +171,7 @@ const Contact = () => {
                         </div>
                     </div>
                 <div className="form-row">
-                    <div className="form-group">
+                    <div className="form-group checkbox-group">
                     <input
                         type="checkbox"
                         name="isLegalDrinkingAge"

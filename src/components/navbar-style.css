@@ -87,26 +87,28 @@
     .container-fluid {
       height: 10%; /* Adjust height */
       flex-direction: column; /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
     }
     
     .brandLogo {
       position: relative; /* Change to relative */
-      top: 0;
-      left: 0;
       transform: none;
+      /* top: 0;  */
+      left: 0; 
       margin-top: 10px;
       height: 80px; /* Adjust logo size */
     }
     
     .custom-nav {
-      margin-top: 20px;
+      margin-top: 0px;
       margin-left: 0;
       margin-right: 0;
     }
     
     .custom-nav ul {
         display: none; 
-        
+        text-align: center;
     }
     
     .custom-nav ul.show {
@@ -115,8 +117,14 @@
         align-items: center;
         background-color: #fff;
         position: absolute;
-        padding-top: 50px; 
-        width: 100%;
+        top: 100%; 
+        left: 0; 
+        right: 0; 
+        padding-top: 0px;
+        padding-bottom: 10px; 
+        margin-right: 9vw; 
+        width: auto;
+        z-index: 1000;
       }
 
     .custom-nav li {
@@ -133,13 +141,15 @@
         display: block;
         cursor: pointer; 
         z-index: 1; 
+        margin-top: 10px;
+        margin-right: 3vw; 
     }
 
     .menu-icon span {
         display: block;
         width: 25px;
         height: 3px;
-        margin: 5px;
+        margin: 5px auto;
         background-color: #264D4C;
     }
   }
