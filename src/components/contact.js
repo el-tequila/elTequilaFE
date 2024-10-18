@@ -35,7 +35,17 @@ const Contact = () => {
       e.preventDefault();
       const { firstName, lastName, email, phone, countryCode, dob, countryOfResidence, zipCode, inquiry, isLegalDrinkingAge, receiveMarketing } = formData;
       let data = {
-        name: firstName
+        firstname: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        countryCode: countryCode,
+        dob: dob,
+        countryOfResidence: countryOfResidence,
+        zipCode: zipCode, 
+        inquiry: inquiry,
+        isLegalDrinkingAge: isLegalDrinkingAge,
+        receiveMarketing: receiveMarketing
       }
       TequilaDataService.addContact(data)
         .then (response => {

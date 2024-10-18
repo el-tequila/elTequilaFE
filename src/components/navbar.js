@@ -4,28 +4,30 @@ import Nav from 'react-bootstrap/Nav';
 import './navbar-style.css';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/formula1_logo.svg';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 
 const AppNavbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef(null)
     
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
     useEffect(() => {
-        const clickOutside = (event) => {
-          if (!event.target.closest('#responsive-navbar-nav')) {
-            setIsMenuOpen(false);
-          }
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
         };
-        document.addEventListener('click', clickOutside);
+
+        document.addEventListener('mousedown', handleClickOutside);
+
         return () => {
-          document.removeEventListener('click', clickOutside);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
-      }, [isMenuOpen]);
+    }, [menuRef]);
 
     return(
         <div> 
@@ -40,21 +42,21 @@ const AppNavbar = () => {
                         <span></span>
                         <span></span>
                     </div>
-                    <Navbar.Collapse in={isMenuOpen} id="responsive-navbar-nav" >
-                        <Nav className={`custom-nav ${isMenuOpen ? 'show' : ''}`}>
-                            <ul> 
-                            <Nav.Link className="home" as={Link} to={"/home"}>
-                                Home
-                            </Nav.Link>
-                            <Nav.Link as={Link} to={"/gallery"}>
-                                Gallery
-                            </Nav.Link>
-                            <Nav.Link as={Link} to={"/contact"}>
-                                Contact
-                            </Nav.Link>
-                        </ul>
-                        </Nav>
-                    </Navbar.Collapse>
+                    {/* <Navbar.Collapse id="responsive-navbar-nav" > */}
+                    <Nav className="custom-nav" ref={ menuRef }>
+                        <ul className={isMenuOpen ? 'show' : ''}> 
+                        <Nav.Link className="home" as={Link} to={"/home"}>
+                            Home
+                        </Nav.Link>
+                        <Nav.Link as={Link} to={"/gallery"}>
+                            Gallery
+                        </Nav.Link>
+                        <Nav.Link as={Link} to={"/contact"}>
+                            Contact
+                        </Nav.Link>
+                    </ul>
+                    </Nav>
+                    {/* </Navbar.Collapse> */}
                 </Container>
                 </Navbar>
             </div>

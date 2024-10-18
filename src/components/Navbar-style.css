@@ -10,7 +10,9 @@
     margin: 0; 
     justify-content: space-between;
     background: #fff;
+    align-items: center;
 }
+
 .brandLogo {
     position: absolute; 
     top: 50%;
@@ -66,6 +68,21 @@
     text-decoration-color: #264D4C; /* white underline */
 }
 
+.custom-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.custom-nav ul.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
 @media only screen and (max-width: 768px) {
     .container-fluid {
       height: 10%; /* Adjust height */
@@ -89,17 +106,17 @@
     
     .custom-nav ul {
         display: none; 
-        flex-direction: column; 
-        align-items: center;
-        position: absolute;
-        top: 75px; /* Adjusted for the logo height */
-        left: 0;
-        width: 100%;
-        background-color: #fff;
+        
     }
     
     .custom-nav ul.show {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        position: absolute;
+        padding-top: 50px; 
+        width: 100%;
       }
 
     .custom-nav li {
@@ -113,7 +130,17 @@
     
     /* Hamburger menu icon */
     .menu-icon {
-      display: block;
+        display: block;
+        cursor: pointer; 
+        z-index: 1; 
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: #264D4C;
     }
   }
 
