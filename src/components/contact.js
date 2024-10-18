@@ -3,6 +3,10 @@ import "./contact-style.css";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import TequilaDataService from '../services/tequila';
+import PhoneInput from 'react-phone-input-2';  
+import 'react-phone-input-2/lib/style.css'; 
+import Select from 'react-select';  
+import { getNames } from 'country-list';
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -26,6 +30,14 @@ const Contact = () => {
     const handleChange = (e) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
+    const handlePhoneChange = (value) => {
+        setFormData({ ...formData, phone: value });  // Update phone field
+      };
+
+    const handleCountryChange = (selectedOption) => {
+        setFormData({ ...formData, countryOfResidence: selectedOption.value });
+      };
   
     const handleCheckboxChange = (e) => {
       setFormData({ ...formData, [e.target.name]: e.target.checked });
@@ -56,6 +68,7 @@ const Contact = () => {
           console.log(e);
         });
       }; 
+      const countryOptions = getNames().map(country => ({ value: country, label: country }));
 
     return(
         <Container className="contact">
@@ -98,22 +111,17 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                     <label>Phone</label>
-                    <select name="countryCode" value={formData.countryCode} onChange={handleChange}>
-                        <option value="+1">+1 (USA)</option>
-                        <option value="+52">+52 (Mexico)</option>
-                        <option value="+61">+61 (Australia)</option>
-                        <option value="+49">+49 (Germany)</option>
-                        <option value="+44">+44 (United Kingdom)</option>
-                        {/* Add more country codes as needed */}
-                    </select>
-                    <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        className="phone-input"
-                    />
+                    <PhoneInput
+                          country={'us'}  // Default country
+                          value={formData.phone}
+                          onChange={handlePhoneChange}  // Handles phone number updates
+                          inputProps={{
+                            name: 'phone',
+                            required: true,
+                            autoFocus: true,
+                          }}
+                          className="phone-input"
+                      />
                         </div>
                     </div>
                 <div className="form-row">
@@ -129,13 +137,14 @@ const Contact = () => {
                     </div>
                     <div className="form-group">
                     <label>Country of Residence</label>
-                    <input
-                        type="text"
-                        name="countryOfResidence"
-                        value={formData.countryOfResidence}
-                        onChange={handleChange}
+                    <Select
+                        options={countryOptions}  // Country list as options
+                        onChange={handleCountryChange}  // Handles country selection
+                        value={countryOptions.find(option => option.value === formData.countryOfResidence)}
+                        placeholder="Select your country"
+                        classNamePrefix="react-select"
                         required
-                    />
+                      />
                     </div>
                 </div>
                 <div className="form-row">

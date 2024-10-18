@@ -43,6 +43,9 @@
     flex-direction: row;
     align-items: center; 
     margin-bottom: 20px; 
+    position: relative; 
+    padding-bottom: 5px; 
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
 
   .form-group label {
@@ -61,7 +64,6 @@
 .form-group input[type="date"] {
     flex-grow: 1;
     border: none; 
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
     outline: none; 
     font-family: "Libre Baskerville", serif;
@@ -69,7 +71,6 @@
 
 .form-group select {
     border: none; 
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
     font-family: "Libre Baskerville", serif;
 }
@@ -88,11 +89,8 @@
   }
   
   .form-group input[type="checkbox"] {
-    display: inline-block;
-    vertical-align: top; /* Align checkbox with text */
-    margin-right: 10px; /* Add space between checkbox and label */
+    margin-right: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
   }
   
   .form-group label {
@@ -111,9 +109,18 @@
 
   .form-group.checkbox-group {
     display: flex;
-    flex-direction: row; /* Stack elements vertically */
-    align-items: center; /* Align items to left */
+    align-items: flex-start; 
+    width: 100%;
+    border-bottom: none; 
   }
+
+  .form-group.checkbox-group label {
+    flex-grow: 1; /* Makes the label take up the remaining space */
+    margin-left: 10px; /* Adds space between the checkbox and label */
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px; /* Adjust font size if needed */
+    color: #264D4C;
+}
 
   .submit-btn {
     font-family: "Libre Baskerville", serif; 
@@ -132,3 +139,137 @@
     box-shadow: 0 0 0 2px #264D4C, 0 0 0 4px #fff; /* Optional box-shadow */
     transition: 0.35s ease-out;
   }
+
+  .inquiry-group {
+    display: flex;
+    flex-direction: column; /* Stack label and textarea vertically */
+    align-items: flex-start; /* Align items to the left */
+    margin-bottom: 20px;
+    border-bottom: none;
+}
+
+.inquiry-group label {
+    font-family: "Libre Baskerville", serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #264D4C;
+    margin-bottom: 10px; /* Add space between the label and the textarea */
+}
+
+.inquiry-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 30vh; /* Set a minimum height for the text area */
+    min-width: 55vw;
+}
+
+/* General styling for the react-select component */
+.contact .react-select__control {
+    background-color: #fff;
+    border: none; 
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: none;
+    font-family: "Libre Baskerville", serif;
+    width: 100%; /* Match width of other form inputs */
+    margin-right: 10px;
+}
+
+.contact .react-select__control--is-focused {
+    border: none; 
+    box-shadow: none;
+}
+
+.contact .react-select__single-value {
+    color: #495057;
+    font-family: "Libre Baskerville", serif;
+}
+
+.contact .react-select__placeholder {
+    color: #6c757d;
+    font-family: "Libre Baskerville", serif;
+}
+
+.contact .react-select__menu {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    z-index: 999;
+}
+
+.contact .react-select__option {
+    padding: 10px;
+    color: #495057;
+    font-family: "Libre Baskerville", serif;
+}
+
+.contact .react-select__option--is-focused {
+    background-color: #e9ecef;
+}
+
+.contact .react-select__dropdown-indicator {
+    color: #495057;
+}
+
+.contact .react-select__indicator-separator {
+    display: none;
+}
+
+/* General phone input container styling */
+.phone-input .react-tel-input {
+    width: 100%; /* Ensure it takes up full width */
+  }
+  
+  /* Styling the phone number input field */
+  .phone-input .form-control {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    padding-left: 50px; 
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* Dropdown button (the flag dropdown) */
+  .phone-input .flag-dropdown {
+    background-color: transparent !important; /* Make the background transparent */
+    border: none !important;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Styling the country flag within the dropdown */
+  .phone-input .flag {
+    width: 24px;
+    height: 16px;
+    margin-right: 10px; /* Adds some space between the flag and the input */
+  }
+  
+  /* When the dropdown is focused */
+  .phone-input .react-tel-input:focus .form-control {
+    border-color: none;
+    box-shadow: none;
+  }
+  
+  /* Dropdown menu styling */
+  .phone-input .country-list {
+    background-color: #fff;
+    border: none;
+    z-index: 1000;
+  }
+  
+  /* Option in the dropdown menu */
+  .phone-input .country {
+    padding: 10px;
+    font-family: "Libre Baskerville", serif;
+    color: #495057;
+  }
+  
+  /* Highlighted country option on hover */
+  .phone-input .country:hover {
+    background-color: #e9ecef;
+  }
+  
+
