@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container'; 
 import "./contact-style.css";
-import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation, } from "react-router-dom";
 import TequilaDataService from '../services/tequila';
 import PhoneInput from 'react-phone-input-2';  
 import 'react-phone-input-2/lib/style.css'; 
@@ -9,7 +9,11 @@ import Select from 'react-select';
 import { getNames } from 'country-list';
 
 const Contact = () => {
+
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
     const [formData, setFormData] = useState({
       firstName: '',
@@ -26,6 +30,14 @@ const Contact = () => {
     });
   
     const [responseData, setResponseData] = useState(null);
+
+    const [thankYouMessage, setThankYouMessage] = useState(null);
+
+    useEffect(() => {
+        if (location.state && location.state.message) {
+            setThankYouMessage(location.state.message);
+        }
+    }, [location.state]);
 
     const handleChange = (e) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,7 +57,26 @@ const Contact = () => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
+      
       const { firstName, lastName, email, phone, countryCode, dob, countryOfResidence, zipCode, inquiry, isLegalDrinkingAge, receiveMarketing } = formData;
+      
+      const missingFields = [];
+        if (!firstName) missingFields.push('First Name');
+        if (!lastName) missingFields.push('Last Name');
+        if (!email) missingFields.push('Email Address');
+        else if (!emailRegex.test(email)) missingFields.push('Email Address (invalid format)'); 
+        if (!phone) missingFields.push('Phone Number');
+        if (!dob) missingFields.push('Date of Birth');
+        if (!countryOfResidence) missingFields.push('Country of Residence');
+        if (!zipCode) missingFields.push('Zip Code');
+        if (!inquiry) missingFields.push('Inquiry');
+        if (!isLegalDrinkingAge) missingFields.push('I am of Legal Drinking Age');
+
+        // If there are missing fields, alert the user
+        if (missingFields.length > 0) {
+            alert(`The following fields are required: ${missingFields.join(', ')}`);
+            return;  // Stop the submission process
+        }
       let data = {
         firstname: firstName,
         lastName: lastName,
@@ -62,7 +93,7 @@ const Contact = () => {
       TequilaDataService.addContact(data)
         .then (response => {
             const content = e.target.value;
-          navigate("/home")
+          navigate("/home", { state: { message: "Thank you for your submission! Someone with our team will respond to your inquiry soon!" } })
         })
         .catch(e => {
           console.log(e);
@@ -197,7 +228,7 @@ const Contact = () => {
                     </label>
                 </div>
                 </div>
-            <button type="submit" className="submit-btn" onClick={ handleSubmit }>Submit</button>
+            <button type="submit" className="submit-btn">Submit</button>
             </form>
         </Container>
         )
