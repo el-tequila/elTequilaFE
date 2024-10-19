@@ -107,7 +107,7 @@ const Contact = () => {
           receiveMarketing: false,
         });
         // Set thank you message
-        setThankYouMessage("Thank you for your submission! Someone with our team will respond to your inquiry soon!");
+        setThankYouMessage("Thank you for your inuqiry! Someone from our team will respond to your inquiry soon!");
       })
         .catch(e => {
           console.log(e);
@@ -120,6 +120,11 @@ const Contact = () => {
             <div className='contact-inquiry'>
             <p><span className="underline-contact">Co</span><span className="text-start">ntact Us</span></p>
             </div>
+            {thankYouMessage ? (
+              <div className="thank-you-message">
+                <p>{thankYouMessage}</p>
+              </div>
+            ) : (
             <form onSubmit={handleSubmit}>
                 <div className="form-row">
                     <div className="form-group">
@@ -244,6 +249,7 @@ const Contact = () => {
                 </div>
             <button type="submit" className="submit-btn">Submit</button>
             </form>
+            )}
         </Container>
         )
     }
