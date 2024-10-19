@@ -91,10 +91,24 @@ const Contact = () => {
         receiveMarketing: receiveMarketing
       }
       TequilaDataService.addContact(data)
-        .then (response => {
-            const content = e.target.value;
-          navigate("/home", { state: { message: "Thank you for your submission! Someone with our team will respond to your inquiry soon!" } })
-        })
+      .then(response => {
+        // Clear the form data
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          countryCode: '',
+          dob: '',
+          countryOfResidence: '',
+          zipCode: '',
+          inquiry: '',
+          isLegalDrinkingAge: false,
+          receiveMarketing: false,
+        });
+        // Set thank you message
+        setThankYouMessage("Thank you for your submission! Someone with our team will respond to your inquiry soon!");
+      })
         .catch(e => {
           console.log(e);
         });
