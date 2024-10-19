@@ -157,7 +157,7 @@ const Home = () => {
                 />
                 </div>
             </Carousel.Item>
-            <Carousel Indicators={false} />
+            <Carousel indicators={false} />
         </Carousel>
             <Container className="connect">
                 <p> Have questions or want to learn more? </p>
