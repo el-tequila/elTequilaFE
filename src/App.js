@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Contact from './components/contact';
 import Underage from './components/age-no';
 import Gallery from './components/gallery';
@@ -10,17 +11,30 @@ import Footer from './components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+
 function App() {
-  return (
+   const [isAgeVerified, setIsAgeVerified] = useState(false);
+
+   useEffect(() => {
+     // Check if the user has already visited the root
+     const isAgeVerified = localStorage.getItem('ageVerified');
+     if (isAgeVerified === 'true') {
+       setIsAgeVerified(true);
+     }
+    }, []);
+
+    function PrivateRoute({children}) {
+      return isAgeVerified ? children : <Navigate to="/" />;
+    }
+      
+    return (
     <div className="App">
       <Routes>
         <Route path="/" element={<AgeVerification />} />
         <Route path="/underage" element={<Underage />} /> 
-        <Route path="/home" element={<><AppNavbar /><Home /><Footer /></>} />
-        <Route path="/gallery" element={<><AppNavbar /><Gallery /><Footer /></>} />
-        <Route path="/contact" element={<><AppNavbar /><Contact /><Footer /></>} />
-        {/* <Route path="/home" element={< ComingSoon />} /> */}
-        {/* <Route path="/" element={< ComingSoon />} /> */}
+        <Route path="/home" element={<><PrivateRoute><AppNavbar /><Home /><Footer /></PrivateRoute></>} />
+        <Route path="/gallery" element={<><PrivateRoute><AppNavbar /><Gallery /><Footer /></PrivateRoute></>} />
+        <Route path="/contact" element={<><PrivateRoute><AppNavbar /><Contact /><Footer /></PrivateRoute></>} />
       </Routes>
     </div>
   );

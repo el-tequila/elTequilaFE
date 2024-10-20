@@ -5,4 +5,5 @@ class TequilaDataService {
         return axios.post(`${process.env.REACT_APP_BE_BASE_URL}/api/requests/contacts`, data);
     }
 }
-export default new TequilaDataService();
+const tequilaDataService = new TequilaDataService();
+export default tequilaDataService;

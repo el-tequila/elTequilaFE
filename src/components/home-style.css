@@ -267,6 +267,7 @@ body {
       font-size: 25px; /* reduce font size for mobile */
       padding-left: 5px; /* reduce padding for mobile */
       padding-bottom: 10px; /* reduce padding for mobile */
+      line-height: 1.38;
     }
   
     .bottom-text {
