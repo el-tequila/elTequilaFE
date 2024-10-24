@@ -17,13 +17,19 @@ function App() {
 
    useEffect(() => {
      // Check if the user has already visited the root
-     const isAgeVerified = localStorage.getItem('ageVerified');
-     if (isAgeVerified === 'true') {
+     const isAgeVerifiedLocal = localStorage.getItem('ageVerified');
+
+     if (isAgeVerifiedLocal === 'true') {
        setIsAgeVerified(true);
      }
     }, []);
 
     function PrivateRoute({children}) {
+      const isAgeVerifiedLocal = localStorage.getItem('ageVerified');
+      if (isAgeVerifiedLocal === 'true') {
+        setIsAgeVerified(true);
+      }
+ 
       return isAgeVerified ? children : <Navigate to="/" />;
     }
       
@@ -31,7 +37,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<AgeVerification />} />
-        <Route path="/underage" element={<Underage />} /> 
+        <Route path="/underage" element={<Underage />}/> 
         <Route path="/home" element={<><PrivateRoute><AppNavbar /><Home /><Footer /></PrivateRoute></>} />
         <Route path="/gallery" element={<><PrivateRoute><AppNavbar /><Gallery /><Footer /></PrivateRoute></>} />
         <Route path="/contact" element={<><PrivateRoute><AppNavbar /><Contact /><Footer /></PrivateRoute></>} />
