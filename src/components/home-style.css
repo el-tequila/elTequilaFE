@@ -264,9 +264,10 @@ body {
     }
   
     .text-container {
-      font-size: 25px; 
-      padding-left: 5px; 
-      padding-bottom: 10px; 
+      font-size: 25px; /* reduce font size for mobile */
+      padding-left: 5px; /* reduce padding for mobile */
+      padding-bottom: 10px; /* reduce padding for mobile */
+      line-height: 1.38;
     }
   
     .bottom-text {

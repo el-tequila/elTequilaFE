@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container'; 
 import "./contact-style.css";
 import { useState, useEffect } from 'react';
-import { useNavigate, useLocation, } from "react-router-dom";
+import { useLocation, } from "react-router-dom";
 import TequilaDataService from '../services/tequila';
 import PhoneInput from 'react-phone-input-2';  
 import 'react-phone-input-2/lib/style.css'; 
@@ -10,7 +10,6 @@ import { getNames } from 'country-list';
 
 const Contact = () => {
 
-    const navigate = useNavigate();
     const location = useLocation();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
@@ -29,8 +28,6 @@ const Contact = () => {
       receiveMarketing: false,
     });
   
-    const [responseData, setResponseData] = useState(null);
-
     const [thankYouMessage, setThankYouMessage] = useState(null);
 
     useEffect(() => {

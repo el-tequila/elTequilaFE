@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import logo from '../assets/formula1_logo.svg';
 import "./age-verify.css";
