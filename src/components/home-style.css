@@ -259,8 +259,8 @@ body {
 
   @media only screen and (max-width: 768px) {
     .home-container {
-      height: 100vh; /* adjust height for mobile */
-      justify-content: center; /* center content vertically */
+      height: 100vh; 
+      justify-content: center; 
     }
   
     .text-container {
@@ -271,13 +271,13 @@ body {
     }
   
     .bottom-text {
-        margin-bottom: 10px; /* reduce margin for mobile */
-        padding-left: 10px; /* reduce padding for mobile */
+        margin-bottom: 10px; 
+        padding-left: 10px; 
     }
   
     .bottom-text p {
-      font-size: 12px; /* reduce font size for mobile */
-      line-height: 1.2; /* adjust line height for mobile */
+      font-size: 12px; 
+      line-height: 1.2; 
     }
 
     .col-two{
@@ -301,7 +301,7 @@ body {
       }
     
       .invitation {
-        width: 100%; /* adjust image width for mobile */
+        width: 100%; 
       }
     
       .custom-color {
@@ -330,7 +330,7 @@ body {
         font-size: 10px; 
       }
       .carousel-nav-item.active {
-        display: block; /* show only active nav item */
+        display: block;
       }
 
       .carousel-nav-item.active::after {
@@ -341,7 +341,7 @@ body {
         position: absolute;
         bottom: 0;
         width: 35%;
-        height: 0.3px; /* Thin base line */
+        height: 0.3px; 
         background-color: rgba(51, 51, 51, 0.3);
       }
     

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">front-end-cap</string>
+    <string name="title_activity_main">front-end-cap</string>
+    <string name="package_name">com.eltequila.app</string>
+    <string name="custom_url_scheme">com.eltequila.app</string>
+</resources>
