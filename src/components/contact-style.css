@@ -279,13 +279,28 @@
     }
 
     .form-group label {
+      flex-direction: column;
         flex-basis: 100%; /* Labels take full width */
         margin-bottom: 5px; /* Adjust spacing */
     }
 
+    .form-row {
+      flex-direction: column; /* Stack the form elements vertically */
+      flex-wrap: wrap; /* Allow items to wrap */
+      width: 100%; /* Ensure the form doesn't scroll horizontally */
+      padding-left: 5vw; /* Adjust padding for mobile */
+  }
+
     .form-group {
-        flex-direction: column; /* Stack checkbox and label vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
+      width: 100%; 
+  }
+
+  .form-group textarea {
+    width: 100%; /* Ensure textarea takes full width */
+}
+
+.submit-btn {
+    margin-left: 0; /* Center the submit button */
+}
 }
 
