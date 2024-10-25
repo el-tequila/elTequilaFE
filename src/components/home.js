@@ -15,20 +15,42 @@ import { useState, useEffect } from 'react';
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const totalSlides = 5; 
+    let intervalId; 
 
         useEffect(() => {
-            const interval = setInterval(() => {
-            setActiveIndex((prevIndex) => (prevIndex + 1) % 5); // 5 = number of slides
+            intervalId = setInterval(() => {
+            setActiveIndex((prevIndex) => (prevIndex + 1) % totalSlides); // 5 = number of slides
             }, 5000); // 5000 = carousel interval
-            return () => clearInterval(interval);
-        }, []);
+            
+            return () => clearInterval(intervalId);
+            }, [totalSlides]);
 
         const handleNavClick = (index) => {
+            clearInterval(intervalId);
             setActiveIndex(index);
+            resetAutoSlide(); 
         };
         const handleSelect = (index) => {
-            setActiveIndex(index);
-        }
+            if (index < 0) {
+                // If index is less than 0 (going backward from the first slide), go to the last slide
+                setActiveIndex(totalSlides - 1);
+            } else if (index >= totalSlides) {
+                // If index exceeds the total slides (going forward from the last slide), reset to the first slide
+                setActiveIndex(0);
+            } else {
+                // Otherwise, just set the active index as normal
+                setActiveIndex(index);
+            }
+        };
+        const resetAutoSlide = () => {
+            setTimeout(() => {
+                intervalId = setInterval(() => {
+                    setActiveIndex((prevIndex) => (prevIndex + 1) % totalSlides); 
+                }, 5000);
+            }, 5000);  // Delay to restart auto-slide
+        };
+
     return (
         <div>
             <div className="home-container">

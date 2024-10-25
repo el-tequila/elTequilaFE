@@ -162,11 +162,13 @@ const Contact = () => {
                           country={'us'}  // Default country
                           value={formData.phone}
                           onChange={handlePhoneChange}  // Handles phone number updates
+                          preferredCountries={['us']}
                           inputProps={{
                             name: 'phone',
                             required: true,
-                            autoFocus: true,
                           }}
+                          enableSearch={true}
+                          defaultCountry="us"
                           className="phone-input"
                       />
                         </div>

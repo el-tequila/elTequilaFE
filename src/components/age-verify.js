@@ -14,6 +14,7 @@ const AgeVerification = () => {
   };
 
   const handleNo = () => {
+    localStorage.setItem('ageVerified', false);
     navigate('/underage');
   };
 

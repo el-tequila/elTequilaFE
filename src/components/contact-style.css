@@ -293,15 +293,26 @@
       font-size: 15px;
     }
 
+    .phone-input .form-control {
+      width: 50vw; 
+    } 
+
     .form-row {
       flex-direction: column; /* Stack the form elements vertically */
       flex-wrap: wrap; /* Allow items to wrap */
       width: 100%; /* Ensure the form doesn't scroll horizontally */
       padding-left: 5vw; /* Adjust padding for mobile */
+      gap: 0 !important; 
   }
 
     .form-group {
       width: 100%; 
+      margin-bottom: 4vh;
+  }
+
+  .form-group input[type="date"] {
+    width: calc(100% - 10px);
+    padding: 5px; 
   }
 
   .form-group textarea {
