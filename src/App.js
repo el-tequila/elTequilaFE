@@ -24,13 +24,17 @@ function App() {
      }
     }, []);
 
-    function PrivateRoute({children}) {
-      const isAgeVerifiedLocal = localStorage.getItem('ageVerified');
-      if (isAgeVerifiedLocal === 'true') {
-        setIsAgeVerified(true);
-      }
+    // function PrivateRoute({children}) {
+    //   const isAgeVerifiedLocal = localStorage.getItem('ageVerified');
+    //   if (isAgeVerifiedLocal === 'true') {
+    //     setIsAgeVerified(true);
+    //   }
  
-      return isAgeVerified ? children : <Navigate to="/" />;
+    //   return isAgeVerified ? children : <Navigate to="/" />;
+    // }
+
+    function PrivateRoute({children}) {
+      return localStorage.getItem('ageVerified') ? children : <Navigate to="/" />;
     }
       
     return (
