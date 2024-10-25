@@ -1,6 +1,6 @@
-body {
+/* body {
     margin: 0; 
-  }
+  } */
 .home-container {
     background-image: url('../../public/images/bludeagave.jpg');
     width: 100vw;
@@ -259,8 +259,12 @@ body {
 
   @media only screen and (max-width: 768px) {
     .home-container {
-      height: 100vh; 
+      height: 50vh; 
+      width: auto;
       justify-content: center; 
+    }
+    .col-one {
+      padding-right: 0 !important;
     }
   
     .text-container {
@@ -269,14 +273,23 @@ body {
       padding-bottom: 10px; /* reduce padding for mobile */
       line-height: 1.38;
     }
-  
+    .custom-color {
+      font-size: 18px; 
+      line-height: 1;
+      /* text-align: center;
+      align-items: center; */
+    }
+
+    .custom-text {
+      font-size: 15px !important;
+    }
+
     .bottom-text {
         margin-bottom: 10px; 
         padding-left: 10px; 
     }
   
     .bottom-text p {
-      font-size: 12px; 
       line-height: 1.2; 
     }
 
@@ -320,9 +333,14 @@ body {
         font-size: 25px !important; 
         padding-top: 30px;
       }
+
+      .carousel-nav {
+        margin-left: 0 !important; 
+      }
       .carousel-nav-container {
-        padding-right: 10vw;
-        max-width: 75vw;
+        /* padding-right: 10vw; */
+        /* max-width: 75vw; */
+        width: auto; 
       }
 
       .carousel-nav-item {

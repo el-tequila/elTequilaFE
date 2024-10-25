@@ -104,7 +104,7 @@ const Contact = () => {
           receiveMarketing: false,
         });
         // Set thank you message
-        setThankYouMessage("Thank you for your inuqiry! Someone from our team will respond to your inquiry soon!");
+        setThankYouMessage("Thank you for your inuqiry! Someone from our team will respond to you soon!");
       })
         .catch(e => {
           console.log(e);
