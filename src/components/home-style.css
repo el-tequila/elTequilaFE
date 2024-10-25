@@ -263,6 +263,9 @@
       width: auto;
       justify-content: center; 
     }
+    .col-one {
+      padding-right: 0 !important;
+    }
   
     .text-container {
       font-size: 25px; /* reduce font size for mobile */
@@ -270,14 +273,23 @@
       padding-bottom: 10px; /* reduce padding for mobile */
       line-height: 1.38;
     }
-  
+    .custom-color {
+      font-size: 18px; 
+      line-height: 1;
+      /* text-align: center;
+      align-items: center; */
+    }
+
+    .custom-text {
+      font-size: 15px !important;
+    }
+
     .bottom-text {
         margin-bottom: 10px; 
         padding-left: 10px; 
     }
   
     .bottom-text p {
-      font-size: 12px; 
       line-height: 1.2; 
     }
 

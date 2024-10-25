@@ -274,14 +274,23 @@
   }
   
   @media (max-width: 768px) {
+    .contact-inquiry {
+      padding-top: 5vh !important; 
+    } 
+
     .text-start, .underline-contact {
         font-size: 24px; /* Smaller font size for mobile */
     }
 
     .form-group label {
+      padding-left: 5vw;
+      font-size: 15px;
       flex-direction: column;
-        flex-basis: 100%; /* Labels take full width */
-        margin-bottom: 5px; /* Adjust spacing */
+      flex-basis: 100%; /* Labels take full width */
+      margin-bottom: 5px; /* Adjust spacing */
+    }
+    .form-group.checkbox-group label {
+      font-size: 15px;
     }
 
     .form-row {
@@ -299,8 +308,8 @@
     width: 100%; /* Ensure textarea takes full width */
 }
 
-.submit-btn {
-    margin-left: 0; /* Center the submit button */
-}
+  .submit-btn {
+    margin-left: 5vw; /* Center the submit button */
+  }
 }
 
